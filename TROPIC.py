@@ -645,7 +645,7 @@ while i < len(csvfile):
     if minmaxflag == 'true':
         Lev_info['index'+str(i)] = [I_tot,[I_tot_max - I_tot,I_tot - I_tot_min],minmaxflag]
     else:
-        Lev_info['index'+str(i)] = [I_tot,[I_tot_err,I_tot_err],minmaxflag]
+        Lev_info['index'+str(i)] = [I_tot,[m.sqrt(I_tot_err),m.sqrt(I_tot_err)],minmaxflag]
     i = i+j
     j = 1
     k = 0
